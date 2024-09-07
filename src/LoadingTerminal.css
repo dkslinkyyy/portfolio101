@@ -1,0 +1,43 @@
+/* LoadingTerminal.css */
+.cmd-interface {
+    background-color: #1e1e1e;
+    padding: 16px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 800px;
+    transition: width 1s ease-in-out; /* Animate shrinking */
+    margin: 0 auto;
+    box-shadow: 0px 0px 10px rgba(0, 255, 0, 0.3);
+  }
+  
+  .shrink {
+    width: 0px; /* Shrink to zero width */
+    overflow: hidden; /* Hide the content as it shrinks */
+  }
+  
+  .cmd-content {
+    white-space: pre-wrap;
+    text-align: left;
+  }
+  
+  pre {
+    margin: 0;
+    font-family: "JetBrains Mono", monospace;
+    font-optical-sizing: auto;
+    font-size: 16px;
+    font-style: normal;
+    color: #00ff00; /* Green terminal text */
+  }
+  
+  pre::before {
+    content: "$ ";
+    color: #00aa00; /* Lighter green for terminal prompt */
+  }
+  
+  /* Main Content */
+  .main-content {
+    color: white;
+    font-family: "Arial", sans-serif;
+    text-align: center;
+  }
+  
