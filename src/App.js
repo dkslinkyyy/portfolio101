@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import LoadingTerminal from './components/LoadingTerminal';
-import profilePicture from './profile-pic.png'; // Ensure path is correct
+import profilePicture from './profile-pic.png'; 
 import './App.css';
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
 
   const handleLoadingComplete = () => {
-    setIsLoading(false); // Stop loading and render the main content
+    setIsLoading(false); 
   };
 
   return (
@@ -26,10 +26,10 @@ function App() {
             <h1>Welcome to the Main Page</h1>
             <p>This is the content that loads after the terminal sequence.</p>
           </div>
-          <div className="profile-container">
+          {/* <div className="profile-container">
             <img src={profilePicture} alt="Profile" className="profile-picture" />
             <div className="overlay"></div>
-          </div>
+          </div> */}
         </div>
       )}
     </div>
