@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Typewriter } from 'react-simple-typewriter';
-import '../LoadingTerminal.css';
+import './LoadingTerminal.css';
 
 const commands = [
   'Initializing profile...',
@@ -22,10 +22,9 @@ function LoadingTerminal({ onComplete }) {
       }, commands[commandIndex].length * 50 + 1000);
       return () => clearTimeout(timeout);
     } else {
-      // Start shrinking after the last command
       setTimeout(() => {
         setIsShrinking(true);
-        setTimeout(onComplete, 1000); // Trigger main page load after shrink animation
+        setTimeout(onComplete, 1000); 
       }, 2000);
     }
   }, [commandIndex, onComplete]);
